@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;900&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+<html>
+	<head>
+		<title>Login Page</title>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark justify-content-between navbar-expand-lg">
+            <form action = "/loginuser">
+                <button style = "border: 0px solid transparent; color: white;" class = "btn btn-outline-dark navbar-brand">donorg</button>
+            </form>
+			<form class="form-inline" action="/register" method = "POST">
+				<button class="btn btn-outline-light my-2 my-sm-0" type="submit">Register</button>
+			</form>
+        </nav>
+        <section id="title" class="colored-section first">
+            <center><h1 class="big-heading">Organ Procurement and Donation Management System</h1></center>
+        </section>		
+        <section class="white-section second">
+		<form class="container" action = "/loginuser" method = "POST">
+				<div class="form-group">
+					<label>Username</label>
+					<input name = "username" type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp" placeholder="Enter username">
+				</div>
+				<div class="form-group">
+					<label>password</label>
+					<input name = "password" type="password" class="form-control" id="inputpassword" placeholder="password">
+				</div>
+				<button type="submit" class="btn btn-dark">Submit</button>
+				<p style="margin: 2% 0;">Are You an admin?<a href ='{{ url_for('login') }}'>Admin Login</a></p>
+		</form>
+		</section>
+	</body>
+</html>
