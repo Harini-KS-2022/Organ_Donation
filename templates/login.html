@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@400;900&family=Sacramento&family=Ubuntu&display=swap" rel="stylesheet">
+<html>
+	<head>
+		<title>Login Page</title>
+	</head>
+	<body>
+		<section id="title" class="colored-section first">
+					<center><h1 class="big-heading">Organ Donation and Procurement Management System</h1></center>
+		</section>
+		<section class="white-section second">
+		<form class="container" action = "/login" method = "POST">
+				<div class="form-group">
+					<label>Username</label>
+					<input name = "username" type="text" class="form-control" id="inputUsername" aria-describedby="emailHelp" placeholder="Enter username">
+				</div>
+				<div class="form-group">
+					<label>Password</label>
+					<input name = "password" type="password" class="form-control" id="inputPassword" placeholder="Password">
+				</div>
+				<button type="submit" class="btn btn-dark">Submit</button>
+		</form>
+		</section>
+	</body>
+</html>
